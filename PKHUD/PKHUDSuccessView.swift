@@ -11,6 +11,13 @@ import UIKit
 
 /// PKHUDCheckmarkView provides an animated success (checkmark) view.
 open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
+	
+    @objc dynamic
+    open var checkmarkColor: UIColor? {
+        didSet {
+            checkmarkShapeLayer.strokeColor = checkmarkColor?.cgColor
+        }
+    }
 
     var checkmarkShapeLayer: CAShapeLayer = {
         let checkmarkPath = UIBezierPath()
@@ -56,7 +63,7 @@ open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
         checkmarkStrokeAnimation.keyTimes = [0, 1]
         checkmarkStrokeAnimation.duration = 0.35
 
-        checkmarkShapeLayer.add(checkmarkStrokeAnimation, forKey: "checkmarkStrokeAnim")
+        checkmarkShapeLayer.add(checkmarkStrokeAnimation, forKey: "checkmarkStrokeAnimation")
     }
 
     open func stopAnimation() {

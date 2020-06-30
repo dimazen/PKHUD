@@ -33,6 +33,7 @@ open class PKHUDSquareBaseView: UIView {
         addSubview(subtitleLabel)
     }
 
+    @objc dynamic
     public let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.alpha = 0.85
@@ -41,6 +42,7 @@ open class PKHUDSquareBaseView: UIView {
         return imageView
     }()
 
+    @objc dynamic
     public let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -51,6 +53,7 @@ open class PKHUDSquareBaseView: UIView {
         return label
     }()
 
+    @objc dynamic
     public let subtitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center

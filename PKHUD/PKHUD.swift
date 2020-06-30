@@ -85,6 +85,8 @@ open class PKHUD: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
 
+    open var dimmingColor: UIColor = UIColor.black.withAlphaComponent(0.25)
+
     open var dimsBackground = true
     open var userInteractionOnUnderlyingViewsEnabled: Bool {
         get {
@@ -133,6 +135,7 @@ open class PKHUD: NSObject {
         }
         if dimsBackground {
             container.showBackground(animated: true)
+            container.dimmingColor = dimmingColor
         }
 
         // If the grace time is set, postpone the HUD display

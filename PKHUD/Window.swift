@@ -86,6 +86,11 @@ internal class ContainerView: UIView {
         view.alpha = 0.0
         return view
     }()
+    
+    internal var dimmingColor: UIColor? {
+        get { backgroundView.backgroundColor }
+        set { backgroundView.backgroundColor = newValue }
+    }
 
     internal func showBackground(animated anim: Bool) {
         if anim {

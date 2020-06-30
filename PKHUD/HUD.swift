@@ -34,6 +34,11 @@ public final class HUD {
         get { return PKHUD.sharedHUD.dimsBackground }
         set { PKHUD.sharedHUD.dimsBackground = newValue }
     }
+	
+    public static var dimmingColor: UIColor {
+        get { return PKHUD.sharedHUD.dimmingColor }
+        set { PKHUD.sharedHUD.dimmingColor = newValue }
+    }
 
     public static var allowsInteraction: Bool {
         get { return PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled  }
